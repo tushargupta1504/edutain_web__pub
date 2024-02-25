@@ -1,0 +1,88 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Courier, monospace;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            color: #000000;
+            text-align: center;
+        }
+
+        .container {
+            width: 300px;
+        }
+
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-family: Courier, monospace;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .signup-link {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #3498db;
+            text-decoration: underline;
+            cursor: pointer;
+            font-family: Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="index.html">
+            <h2>Login</h2>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+            
+        <!-- Don't have an account? Signup here link -->
+        <div class="signup-link">Don't have an account? Signup <a href="simplesignup.html">here</a></div>
+    </div>
+        </form>
+
+
+</body>
+</html>

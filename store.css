@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    /* background-color: rgb(177, 239, 244); */
+    background-image: url('https://img.freepik.com/premium-vector/very-peri-color-background-with-hand-drawn-gift-boxes-vector-seamless-pattern-wrapping-paper_182787-192.jpg');
+    color: white;
+
+    
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    font-size: 3rem;
+    color: white;
+}
+
+/* header h1 {
+    display: inline-block;
+    background-color: black;
+} */
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 930px;
+    margin: 20px auto;
+}
+
+.user-points {
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.redeem-card {
+    width: 200px;
+    margin: 30px;
+    /* height: fit-content ; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.redeem-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* align-self: center; */
+    /* height: auto; */
+}
+
+.redeem-card-info {
+    padding: 10px;
+    text-align: center;
+}
+
+.redeem-card h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.redeem-card p {
+    margin: 0;
+    color: #555;
+}
+
+.redeem-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 0 0 8px 8px;
+    cursor: pointer;
+}
+
+
+

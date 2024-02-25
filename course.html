@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGame Platform</title>
+    <link rel="stylesheet" href="course.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Borel&family=Montserrat:wght@300;400;500;600;700&family=Mooli&family=REM:wght@100&family=Roboto:ital@1&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+
+<header>
+    <div class="logo-container">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Logo"></a>
+      </div>
+      <h1>Edutain Platform</h1>
+    <p>Unlock knowledge, earn points, and make a positive impact!</p>
+</header>
+
+<section id="courses">
+    <div class="course">
+        <img src="images/course1.jpg" alt="Course 1 Image">
+        <h2>Course 1: Quantum Physics Quest</h2>
+        <p>Embark on a journey through the fascinating world of quantum physics and unlock the secrets of the universe.</p>
+        <button onclick="startCourse(1)">Start Learning!</button>
+    </div>
+
+    <div class="course">
+        <img src="images/course2.png" alt="Course 2 Image">
+        <h2>Course 2: Code Warriors Challenge</h2>
+        <p>Sharpen your coding skills, compete with fellow learners, and climb the Code Warriors Challenge leaderboard with everyone.</p>
+        <button onclick="startCourse(2)">Start Learning!</button>
+    </div>
+    <div class="course">
+        <img src="images/course3.jpg" alt="Course 3 Image">
+        <h2>Course 3: Mathematics Quest</h2>
+        <p>Sharpen your Mathematics skills, compete with fellow learners, and climb the Mathematics leaderboard.</p>
+        <button onclick="startCourse(3)">Start Learning!</button>
+    </div>
+
+</section>
+<div class="leader"><h2>LEADERBOARD</h2></div>
+<div id="header">
+<h1>Ranking</h1>
+<button class="share">
+<i class="ph ph-share-network"></i>
+</button>
+</div>
+<div id="leaderboard">
+<div class="ribbon"></div>
+<table>
+    <tr>
+        <td class="number">1</td>
+        <td class="name">Player1</td>
+        <td class="points" style="color: black;">2600<img class="gold-medal" src="https://github.com/malunaridev/Challenges-iCodeThis/blob/master/4-leaderboard/assets/gold-medal.png?raw=true" alt="gold medal"/>
+        </td>
+    </tr>
+    <tr>
+        <td class="number">2</td>
+        <td class="name">Player2</td>
+        <td class="points">2596</td>
+    </tr>
+    <tr>
+        <td class="number">3</td>
+        <td class="name">Player3</td>
+        <td class="points">2594</td>
+    </tr>
+    <tr>
+        <td class="number">4</td>
+        <td class="name">Player4</td>
+        <td class="points">2590</td>
+    </tr>
+    <tr>
+        <td class="number">5</td>
+        <td class="name">Player5</td>
+        <td class="points">2582</td>
+    </tr>
+    </table>
+    <div id="buttons">
+        <button class="continue">Continue</button>
+    </div>
+    </div>
+
+<footer>
+    <p>© 2023 EduGame Platform. All rights reserved. | <a href="redeem.html">Plant Trees with Your Points</a></p>
+</footer>
+
+<script src="course.js"></script>
+</body>
+</html>

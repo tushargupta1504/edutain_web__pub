@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGame Platform</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #007bff;
+            padding: 10px;
+            color: #fff;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .student-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .student {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            flex: 1;
+            margin: 0 10px;
+        }
+
+        .leaderboard {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EduGame Platform</h1>
+    </header>
+    <main>
+        <div class="student-container">
+            <div class="student" id="student1">
+                <h2>Student 1</h2>
+                <p>Points: <span id="points1">0</span></p>
+                <p>Streak: <span id="streak1">0</span></p>
+                <!-- <button onclick="earnPoints(1)">Earn Points</button> -->
+            </div>
+
+            <div class="student" id="student2">
+                <h2>Student 2</h2>
+                <p>Points: <span id="points2">0</span></p>
+                <p>Streak: <span id="streak2">0</span></p>
+                <!-- <button onclick="earnPoints(2)">Earn Points</button> -->
+            </div>
+
+            <div class="student" id="student3">
+                <h2>Student 3</h2>
+                <p>Points: <span id="points3">0</span></p>
+                <p>Streak: <span id="streak3">0</span></p>
+                <!-- <button onclick="earnPoints(3)">Earn Points</button> -->
+            </div>
+        </div>
+
+        <div class="leaderboard">
+            <h2>Leaderboard</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Student</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Leaderboard content will be dynamically updated here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // Sample student data
+        const students = [
+            { id: 1, name: "Student 1", points: 0, streak: 0 },
+            { id: 2, name: "Student 2", points: 0, streak: 0 },
+            { id: 3, name: "Student 3", points: 0, streak: 0 },
+        ];
+
+        // Function to earn points and update UI
+        function earnPoints(studentId) {
+            const student = students.find(s => s.id === studentId);
+            student.points += 10;
+            student.streak += 1;
+
+            // Update UI
+            document.getElementById(`points${studentId}`).innerText = student.points;
+            document.getElementById(`streak${studentId}`).innerText = student.streak;
+
+            // Update leaderboard
+            updateLeaderboard();
+        }
+
+        // Function to update the leaderboard
+        function updateLeaderboard() {
+            const leaderboardTable = document.querySelector('.leaderboard tbody');
+            // Clear existing rows
+            leaderboardTable.innerHTML = '';
+
+            // Sort students by points (descending order)
+            const sortedStudents = [...students].sort((a, b) => b.points - a.points);
+
+            // Update leaderboard rows
+            sortedStudents.forEach((student, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${student.name}</td>
+                    <td>${student.points}</td>
+                `;
+                leaderboardTable.appendChild(row);
+            });
+        }
+    </script>
+</body>
+</html>
